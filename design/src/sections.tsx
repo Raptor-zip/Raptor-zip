@@ -22,7 +22,7 @@ export function Header({ t }: { t: Theme }) {
         貝淵 蒼馬
       </text>
       <text x="262" y="78" className="in" fontSize="20" fill={t.muted} letterSpacing="0.5">
-        Kaibuchi Souma
+        Kaibuchi Soma
       </text>
       <text x="0" y="118" className="jm" fontSize="15" fill={t.fg}>
         豊田工業高等専門学校 電気・電子システム工学科 本科4年
