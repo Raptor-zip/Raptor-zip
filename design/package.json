@@ -1,0 +1,22 @@
+{
+  "name": "profile-design",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsx src/build.tsx",
+    "preview": "tsx src/build.tsx && tsx src/preview.ts"
+  },
+  "dependencies": {
+    "@fontsource/jetbrains-mono": "^5.3.0",
+    "@fontsource/space-grotesk": "^5.3.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
