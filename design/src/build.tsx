@@ -7,27 +7,25 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { renderToStaticMarkup } from "react-dom/server";
 import type { ReactElement } from "react";
-import { Achievements } from "./Achievements.tsx";
-import { Header } from "./Header.tsx";
-import { Skills } from "./Skills.tsx";
+import { Header, Projects, Record, Skills } from "./sections.tsx";
+import { themes } from "./theme.ts";
 
 const NOTO = "/usr/share/fonts/opentype/noto";
 const FS = new URL("../node_modules/@fontsource/", import.meta.url).pathname;
 
 const fonts = {
-  "JP Black": { src: `${NOTO}/NotoSansCJK-Black.ttc`, n: 0 },
   "JP Bold": { src: `${NOTO}/NotoSansCJK-Bold.ttc`, n: 0 },
   "JP Medium": { src: `${NOTO}/NotoSansCJK-Medium.ttc`, n: 0 },
-  "Space Grotesk": { src: `${FS}space-grotesk/files/space-grotesk-latin-700-normal.woff2`, n: 0 },
+  "JP Regular": { src: `${NOTO}/NotoSansCJK-Regular.ttc`, n: 0 },
+  Inter: { src: `${FS}inter/files/inter-latin-600-normal.woff2`, n: 0 },
   "JetBrains Mono": { src: `${FS}jetbrains-mono/files/jetbrains-mono-latin-500-normal.woff2`, n: 0 },
 } as const;
 type Family = keyof typeof fonts;
 
-const cards: { name: string; el: ReactElement }[] = [
-  { name: "header", el: <Header /> },
-  { name: "achievements", el: <Achievements /> },
-  { name: "skills", el: <Skills /> },
-];
+const sections = { header: Header, record: Record, projects: Projects, skills: Skills };
+const cards: { name: string; el: ReactElement }[] = themes.flatMap((t) =>
+  Object.entries(sections).map(([name, C]) => ({ name: `${name}-${t.name}`, el: <C t={t} /> })),
+);
 
 const out = new URL("../../assets/profile/", import.meta.url).pathname;
 mkdirSync(out, { recursive: true });
@@ -38,11 +36,11 @@ const decode = (s: string) =>
 
 // class 名 → フォント。<text> の class を見て、そのフォントで描く文字だけを集める。
 const classFont: Record<string, Family> = {
-  jpk: "JP Black",
-  jpb: "JP Bold",
-  jpm: "JP Medium",
-  disp: "Space Grotesk",
-  mono: "JetBrains Mono",
+  jb: "JP Bold",
+  jm: "JP Medium",
+  jr: "JP Regular",
+  in: "Inter",
+  mo: "JetBrains Mono",
 };
 
 function charsByFamily(svg: string) {
