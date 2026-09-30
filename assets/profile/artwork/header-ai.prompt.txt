@@ -1,0 +1,18 @@
+Tool: built-in image_gen.imagegen
+transparent_background: false
+
+Use case: ui-mockup / ads-marketing.
+Create a finished, beautifully art-directed hero/banner image for a Japanese robotics engineer's GitHub profile portfolio. The user strongly dislikes the current conventional dark navy/cyan grid, space photograph, thin serif Japanese name, and four statistic columns. They explicitly want ChatGPT image generation to rethink the design creatively and flexibly. You are the visual designer: choose an original, cohesive art direction, sophisticated typography, color, layout and illustrative visual language. Think excellent independent designer portfolio, not generic AI/SaaS template. Design freedom is intentional. It should feel confident, contemporary and memorable while still being calm and highly legible.
+Asset: one polished flat digital portfolio banner, landscape roughly 2:1, edge-to-edge artwork, no browser chrome, no device, no desk mockup. This is the actual header artwork, not a screenshot of a web page. It will be placed above text/project cards in a GitHub README.
+Subject: Soma Kaibuchi, maker of physical AI, robotics, perception and XR apps. Use an expressive, artful visual metaphor of robotics/perception/physical computing if it improves the composition. Avoid fake photographs of specific real projects or people. Names and awards are real; do not invent other accomplishments, dates, employers or affiliation.
+Text to render accurately, with deliberate visual hierarchy:
+"貝淵 蒼馬"
+"SOMA KAIBUCHI"
+"PHYSICAL AI / ROBOTICS"
+"コードを、現実世界の動きへ。"
+"DCON 優勝"
+"自動運転AI 準優勝"
+"STEAM JAPAN 金賞"
+"KOSENJIN SUMMIT 優勝"
+Award phrases are secondary, restrained and readable. Treat each competition+result as ONE complete phrase; do not place giant 1st/2nd/Gold rankings above small event names. You can organize these phrases into an elegant strip, rows, tags, or another designed structure that suits your composition; do not feel bound to four equal columns. The name is the focal point. Use plenty of purposeful negative space and careful optical alignment.
+No additional text. In particular NO JAXA duties, department or work location; NO academic department; NO graduation year. No starfield, Earth photo, reticle circles, neon HUD, generic sci-fi grids or cluttered dashboard. Aim for professional graphic design with precise typography and interesting composition. All Japanese text must be accurately spelled. Deliver one final high quality image.
